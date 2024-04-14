@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Edit | Book App
+{% endblock %}
+{% block content %}
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="{% static 'css/book_form.css' %}?v={% now "U" %}" rel="stylesheet">
+  <div class="container">
+    <h2 class="my-4">Edit Book</h2>
+    {% if form.cover_image.value %}
+      
+    {% endif %}
+    <form method="POST" class="mb-3">
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="form-group">
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {{ field }}
+          {% if field.help_text %}
+            <small class="form-text text-muted">{{ field.help_text }}</small>
+          {% endif %}
+          {% for error in field.errors %}
+            <div class="invalid-feedback">
+              {{ error }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+      <div>
+        <img class="book-cover" src="{{ form.cover_image.value }}" alt="Book cover image">
+      </div>
+      <div>
+        <a href="{% url 'book_list' %}" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+    </form>
+    
+  </div>
+{% endblock %}

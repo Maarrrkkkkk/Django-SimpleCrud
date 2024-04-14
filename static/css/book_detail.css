@@ -1,0 +1,98 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* General Styles */
+body {
+    background-color: #f2f2f2;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+
+h2,
+p {
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1.0em;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+/* Styles for the form group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-left: 10%;
+    text-transform: capitalize;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 80%;
+    margin: auto;
+}
+
+/* Utility Classes */
+.full-width {
+    width: 100%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.book-image {
+    max-width: 600px;
+    max-height: 600px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-left: 10%;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    color: white !important;
+    background-color: rgb(168, 16, 26) !important;
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    color: black !important;
+    background-color: rgb(168, 16, 26) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(168, 16, 26);
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}

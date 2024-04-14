@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load static %}
+  <link href="{% static 'css/base.css' %}?v={% now "U" %}" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="Logo" class="logo"></a>
+    <a href="{% url 'book_new' %}">Add New Book</a> <span class="separator">|</span>
+    <a href="{% url 'deleted_books' %}">Deleted Books</a>
+  </header>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+  <footer class="footer">
+    <div class="container text-center">
+      <span class="text-muted">&copy; {{ now.year }} Book Blog | Maarrrkkkk</span>
+    </div>
+  </footer>
+</body>
+</html>

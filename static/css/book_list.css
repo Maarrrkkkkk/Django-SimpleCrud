@@ -1,0 +1,37 @@
+/* book_list.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding-bottom: 50px; 
+    /* background-image: url('/static/images/logo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+  
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: black;
+}
+.header-row {
+    background-color: rgb(213, 215, 220);
+}
+
+th,
+td {
+    color: black;
+    font-weight: 600;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(168, 16, 26);
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}

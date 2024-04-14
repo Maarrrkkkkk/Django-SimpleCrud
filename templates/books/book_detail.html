@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+View | Book App
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="{% static 'css/book_detail.css' %}?v={% now "U" %}" rel="stylesheet">
+  <div class="row">
+    <!-- Left column for the book's image -->
+    <div class="col-md-6">
+      <div class="form-group">
+        {% if book.cover_image %}
+          <!-- <p>{{ book.cover_image }}</p> -->
+          <a href="{{ book.cover_image }}">
+            <img class="book-image" src="{{ book.cover_image }}" alt="Book cover">
+          </a>
+        {% else %}
+          <p>No cover image available</p>
+        {% endif %}
+      </div>
+    </div>
+    <!-- Right column for the title, author, and description of the book -->
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" id="title" class="form-control" value="{{ book.title }}" readonly>
+        </div>
+        <div class="form-group">
+          <label for="author">Author:</label>
+          <input type="text" id="author" class="form-control" value="{{ book.author }}" readonly>
+        </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" class="form-control" rows="5" readonly>{{ book.description }}</textarea>
+        </div>
+        <div class="center">
+          <a href="{% url 'home' %}" class="btn btn-primary">Back to Homepage</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+{% endblock %}

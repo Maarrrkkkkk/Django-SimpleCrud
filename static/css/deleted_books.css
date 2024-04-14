@@ -1,0 +1,55 @@
+/* deleted_books.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding-bottom: 50px; 
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.btn-warning {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+.center-text {
+  text-align: center;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(168, 16, 26);
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
