@@ -1,0 +1,2 @@
+# Django-SimpleCrud
+Blog Book
